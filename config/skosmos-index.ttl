@@ -25,7 +25,7 @@
 
 :tdb_dataset_readwrite
         a tdb:DatasetTDB ;
-        tdb:location  "/fuseki/databases/skosmos" .
+        tdb:location  "/tmp/skosmos" .
 
 :index_lucene a text:TextIndexLucene ;
 	text:directory <file:/fuseki/databases/skosmos/text> ;

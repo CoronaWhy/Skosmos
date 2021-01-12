@@ -10,6 +10,7 @@ RUN apt-get update && \
 RUN a2enmod rewrite
 COPY config/composer-install.sh /tmp/composer-install.sh
 COPY config/composer.json /var/www/html/composer.json
+COPY composer.phar /var/www/html/composer.phar
 RUN /bin/bash /tmp/composer-install.sh
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install xsl

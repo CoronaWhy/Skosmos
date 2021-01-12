@@ -1,0 +1,826 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix iso-thes: <http://purl.org/iso25964/skos-thes#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unescothes: <https://skosmos.coronawhy.org/COVID-19#> .
+@prefix uneskos: <http://purl.org/umu/uneskos#> .
+unescothes:CS000 a skos:ConceptScheme;
+   uneskos:hasMicroThesaurus unescothes:CQ001;
+   uneskos:hasMicroThesaurus unescothes:CQ002;
+   uneskos:hasMicroThesaurus unescothes:COL003;
+   uneskos:hasMicroThesaurus unescothes:COL004;
+   uneskos:hasMicroThesaurus unescothes:COL005;
+   uneskos:hasMicroThesaurus unescothes:COL006;
+   dcterms:title "UNESCO Thesaurus"@en;
+   dcterms:title "Tesauro de la UNESCO"@es;
+   dcterms:title "Thésaurus de l'UNESCO"@fr;
+   dcterms:title "Тезаурус ЮНЕСКО"@ru;
+   skos:prefLabel "UNESCO Thesaurus"@en;
+   skos:prefLabel "Tesauro de la UNESCO"@es;
+   skos:prefLabel "Thésaurus de l'UNESCO"@fr;
+   skos:prefLabel "Тезаурус ЮНЕСКО"@ru;
+   dcterms:source <http://databases.unesco.org/thesaurus/>;
+   dcterms:source <http://www2.ulcc.ac.uk/unesco/>;
+   dcterms:creator "UNESCO";
+   dcterms:created "1977-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+   dcterms:type "thesaurus" ;
+   dcterms:identifier "https://skosmos.coronawhy.org/COVID-19" ;
+   dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng> , <http://id.loc.gov/vocabulary/iso639-2/fre> , <http://id.loc.gov/vocabulary/iso639-2/spa> , <http://id.loc.gov/vocabulary/iso639-2/rus> ;
+   dcterms:conformsTo "ISO 25964" ;
+   skos:hasTopConcept unescothes:CQ1001;
+   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/igo/> ;
+   dcterms:rights "CC-BY-SA" ;
+   skos:hasTopConcept unescothes:C00008;
+   uneskos:hasMicroThesaurus unescothes:COL007.
+
+unescothes:COL007 a iso-thes:ConceptGroup;
+   rdfs:label "Countries and country groupings"@en;
+   rdfs:label "Pays et ensembles de pays"@fr;
+   rdfs:label "Países y agrupaciones de países"@es;
+   rdfs:label "Страны и группы стран"@ru;
+   skos:prefLabel "Countries and country groupings"@en;
+   skos:prefLabel "Pays et ensembles de pays"@fr;
+   skos:prefLabel "Países y agrupaciones de países"@es;
+   skos:prefLabel "Страны и группы стран"@ru;
+   skos:notation "7";
+   iso-thes:microThesaurusOf unescothes:CS000;
+   iso-thes:subGroup unescothes:COL705;
+   iso-thes:subGroup unescothes:COL710;
+   iso-thes:subGroup unescothes:COL715;
+   iso-thes:subGroup unescothes:COL720;
+   iso-thes:subGroup unescothes:COL725;
+   iso-thes:subGroup unescothes:COL730;
+   iso-thes:subGroup unescothes:COL735;
+   iso-thes:subGroup unescothes:COL740;
+   iso-thes:subGroup unescothes:COL745.
+
+unescothes:C04166 a skos:Concept;
+   skos:prefLabel "Ukraine"@en;
+   skos:prefLabel "Ukraine"@fr;
+   skos:prefLabel "Ucrania"@es;
+   skos:prefLabel "Украина"@ru;
+   uneskos:memberOf unescothes:CO007;
+   skos:inScheme unescothes:CS000;
+   skos:broader unescothes:C00602;
+   skos:broader unescothes:C01139;
+   skos:scopeNote "Se aplica a los eventos posteriores a 1991."@es;
+   skos:scopeNote "S'applique aux événements survenus après 1991."@fr;
+   skos:scopeNote "Используется по отношению к событиям, происходившим после 1991 г."@ru.
+
+unescothes:CQ1001 a skos:Concept ;
+    skos:altLabel "coronavirus origin" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ001" ;
+    skos:prefLabel "what is the origin of COVID-19"@en;
+    uneskos:memberOf unescothes:CO007;
+    skos:inScheme unescothes:CS000;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information about whether the virus was designed in a lab or occured naturally in animals and how it got to humans"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ002> a skos:Concept ;
+    skos:altLabel "coronavirus response to weather changes" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ002" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how does the coronavirus respond to changes in the weather"@en;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information about whether the COVID-19 pandemic will be impacted by the seasons and hot or cold temperatures"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ006> a skos:Concept ;
+skos:altLabel "coronavirus test rapid testing"@en ;
+skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+skos:code "CQ006" ;
+skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+skos:prefLabel "what types of rapid testing for COVID-19 have been developed?"@en ;
+skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+skos:scopeNote "seeking information on what tests are used to diagnose COVID-19, how reliable are these tests, Who should be tested and when"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ003> a skos:Concept ;
+    skos:altLabel "coronavirus immunity" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ003" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "will SARS-CoV2 infected people develop immunity?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether people who have recovered from COVID-19 can have it again, and whether having SARS, or other diseases caused by coronavirus, will improve chances to fight COVID-19" .
+
+<https://skosmos.coronawhy.org/COVID19#CQ004> a skos:Concept ;
+    skos:altLabel "how do people die from the coronavirus" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ004" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how do people die from the coronavirus?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the known causes of death in people who have COVID-19" .
+
+skos:CQ002 a skos:Concept ;
+    skos:altLabel "coronavirus response to weather changes" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ002" ;
+    skos:prefLabel "how does the coronavirus respond to changes in the weather" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information about whether the COVID-19 pandemic will be impacted by the seasons and hot or cold temperatures" .
+
+skos:CQ003 a skos:Concept ;
+    skos:altLabel "coronavirus immunity" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ003" ;
+    skos:prefLabel "will SARS-CoV2 infected people develop immunity?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether people who have recovered from COVID-19 can have it again, and whether having SARS, or other diseases caused by coronavirus, will improve chances to fight COVID-19" .
+
+skos:CQ004 a skos:Concept ;
+    skos:altLabel "how do people die from the coronavirus" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ004" ;
+    skos:prefLabel "how do people die from the coronavirus?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the known causes of death in people who have COVID-19" .
+
+skos:CQ005 a skos:Concept ;
+    skos:altLabel "animal models of COVID-19" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ005" ;
+    skos:prefLabel "are there any drugs that work for SARS-CoV or SARS-CoV-2 in animals?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what we can learn about the impact of drugs on covid-19 from animal studies and what drugs can treat COVID-19" .
+
+skos:CQ006 a skos:Concept ;
+    skos:altLabel "coronavirus test rapid testing" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ006" ;
+    skos:prefLabel "what types of rapid testing for COVID-19 have been developed?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what tests are used to diagnose COVID-19, how reliable are these tests, Who should be tested and when" .
+
+skos:CQ007 a skos:Concept ;
+    skos:altLabel "blood tests for coronavirus" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ007" ;
+    skos:prefLabel "are there blood tests that detect antibodies to coronavirus?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information to determine if and what kinds of blood tests will show if a person had COVID, and if the blood tests show if a person is protected from COVID-19" .
+
+skos:CQ008 a skos:Concept ;
+    skos:altLabel "coronavirus under reporting" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ008" ;
+    skos:prefLabel "has testing availability lead to underreporting of COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the dangers of underreporting SARS-CoV-2 exposure and whether information about COVID-19 and its impact is skewed because of inadequate testing capacity or underreporting" .
+
+skos:CQ009 a skos:Concept ;
+    skos:altLabel "coronavirus in Canada" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ009" ;
+    skos:prefLabel "how has COVID-19 affected Canada" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether COVID-19 has affected Canada and, if so, to what extent" .
+
+skos:CQ010 a skos:Concept ;
+    skos:altLabel "coronavirus social distancing impact" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ010" ;
+    skos:prefLabel "has social distancing had an impact on slowing the spread of COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on social distancing, and whether it slows down the pandemic" .
+
+skos:CQ011 a skos:Concept ;
+    skos:altLabel "coronavirus hospital rationing" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ011" ;
+    skos:prefLabel "what are the guidelines for triaging patients infected with coronavirus?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how health personnel decide which COVID-19 patients are prioritized for treatment" .
+
+skos:CQ012 a skos:Concept ;
+    skos:altLabel "coronavirus quarantine" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ012" ;
+    skos:prefLabel "what are best practices in hospitals and at home in maintaining quarantine?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how people who are infected or who were in physical contact with COVID-infected people can protect family members and other people beyond social distancing" .
+
+skos:CQ013 a skos:Concept ;
+    skos:altLabel "how does coronavirus spread" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ013" ;
+    skos:prefLabel "how does coronavirus spread?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on all possible ways to contract COVID-19 from people, animals and objects" .
+
+skos:CQ014 a skos:Concept ;
+    skos:altLabel "coronavirus super spreaders" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ014" ;
+    skos:prefLabel "what evidence is there related to COVID-19 super spreaders" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what it means to be a super spreader, why or how people become super spreaders, how common they are, and if there any special precautions against them" .
+
+skos:CQ015 a skos:Concept ;
+    skos:altLabel "coronavirus outside body" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ015" ;
+    skos:prefLabel "how long can the coronavirus live outside the body" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how long the coronavirus can stay active on solid and liquid food, water, air, food containers and common use surfaces" .
+
+skos:CQ016 a skos:Concept ;
+    skos:altLabel "how long does coronavirus survive on surfaces" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ016" ;
+    skos:prefLabel "how long does coronavirus survive on surfaces?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how long can coronavirus stay active on common use surfaces" .
+
+skos:CQ017 a skos:Concept ;
+    skos:altLabel "coronavirus clinical trials" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ017" ;
+    skos:prefLabel "are there any clinical trials available for the coronavirus" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what COVID-19 clinicial trials are available and who can enroll" .
+
+skos:CQ018 a skos:Concept ;
+    skos:altLabel "masks prevent coronavirus" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ018" ;
+    skos:prefLabel "what are the best masks for preventing infection by COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what types of masks should or should not be used to prevent infection by Covid-19" .
+
+skos:CQ019 a skos:Concept ;
+    skos:altLabel "what alcohol sanitizer kills coronavirus" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ019" ;
+    skos:prefLabel "what hand sanitizers kill COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on which hand sanitizers and household cleaning items kill SARS-CoV-2 virus" .
+
+skos:CQ020 a skos:Concept ;
+    skos:altLabel "coronavirus and ACE inhibitors" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ020" ;
+    skos:prefLabel "are patients taking Angiotensin-converting enzyme inhibitors (ACE) inhibitors at increased risk for COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how COVID affects people taking Angiotensin-converting enzyme (ACE) inhibitors, and what people need to know if they are taking ACE inhibitors" .
+
+skos:CQ021 a skos:Concept ;
+    skos:altLabel "coronavirus mortality" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ021" ;
+    skos:prefLabel "what are the mortality rates overall and in specific populations" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking  information on COVID-19 fatality rates in different countries and in different population groups based on gender, blood types, or other factors" .
+
+skos:CQ022 a skos:Concept ;
+    skos:altLabel "coronavirus heart impacts" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ022" ;
+    skos:prefLabel "are heart complications likely in patients with COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether COVID-19 can cause heart complications, or if the condition will worsen in people who already have heart disease" .
+
+skos:CQ023 a skos:Concept ;
+    skos:altLabel "coronavirus hypertension" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ023" ;
+    skos:prefLabel "what kinds of complications related to COVID-19 are associated with hypertension?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what people with high blood pressure need to know about COVID-19" .
+
+skos:CQ024 a skos:Concept ;
+    skos:altLabel "coronavirus diabetes" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ024" ;
+    skos:prefLabel "what kinds of complications related to COVID-19 are associated with diabetes" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what people with diabetes need to know about COVID-19" .
+
+skos:CQ025 a skos:Concept ;
+    skos:altLabel "coronavirus biomarkers" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ025" ;
+    skos:prefLabel "which tests indicate severe covid infection?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on tests that predict which patients will develop severe COVID-19 symptoms and complications" .
+
+skos:CQ026 a skos:Concept ;
+    skos:altLabel "coronavirus early symptoms" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ026" ;
+    skos:prefLabel "what are the early symptoms of COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on symptoms that show a patient is developing COVID-19" .
+
+skos:CQ027 a skos:Concept ;
+    skos:altLabel "coronavirus asymptomatic" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ027" ;
+    skos:prefLabel "what is known about people that have COVID-19 without any symptoms?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on people that have COVID-19 without any symptoms" .
+
+skos:CQ028 a skos:Concept ;
+    skos:altLabel "coronavirus hydroxychloroquine" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ028" ;
+    skos:prefLabel "does hydroxychloroquine treat COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on evidence that hydroxychloroquine treats COVID-19" .
+
+skos:CQ029 a skos:Concept ;
+    skos:altLabel "coronavirus drug repurposing" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ029" ;
+    skos:prefLabel "are there any existing drugs that could repurposed to treat COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on which SARS-CoV-2 protein-protein interactions indicate potential for drug targets, whether there are approved drugs that can be repurposed based on this information, and if there any known drugs that could be used to treat COVID-19" .
+
+skos:CQ030 a skos:Concept ;
+    skos:altLabel "coronavirus remdesivir" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ030" ;
+    skos:prefLabel "is remdesivir an effective treatment for COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on remdesivir treatments for COVID-19" .
+
+skos:CQ031 a skos:Concept ;
+    skos:altLabel "difference between coronavirus and flu" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ031" ;
+    skos:prefLabel "how does the coronavirus differ from seasonal flu?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on the differences in symptoms between COVID-19 and flu, what tests will distinguish between coronavirus and the flu, and the differences in outcomes and complications" .
+
+skos:CQ032 a skos:Concept ;
+    skos:altLabel "coronavirus subtypes" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ032" ;
+    skos:prefLabel "does SARS-CoV-2 have multiple strains, and if so what are they and how are they different?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the different strains of SARS-Cov-2 and if different strains cause different symptoms" .
+
+skos:CQ033 a skos:Concept ;
+    skos:altLabel "coronavirus vaccine candidates" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ033" ;
+    skos:prefLabel "what vaccine candidates are being tested for COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how far we are from getting a vaccine, which if any countries have vaccines, and if these vaccines be effective against all types of SARS-CoV-2" .
+
+skos:CQ034 a skos:Concept ;
+    skos:altLabel "coronavirus recovery" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ034" ;
+    skos:prefLabel "what are the long-term complications for people who recover from COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on any long-lasting complications of COVID-19, whether people can develop chronic lung disease and if there is any permanent organ damage" .
+
+skos:CQ038 a skos:Concept ;
+    skos:altLabel "COVID inflammatory response" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ038" ;
+    skos:prefLabel "how does COVID-19 cause or contribute to inflammation?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on how coronavirus causes damage to our body, how the body fights the disease and how the drugs help the body fighting COVID" .
+
+skos:CQ039 a skos:Concept ;
+    skos:altLabel "COVID-19 cytokine storm" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ039" ;
+    skos:prefLabel "what is a cytokine storm and how is it related to COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for definitions of cytokine storm, the role of COVID-19 in cytokine storms, what causes it, what happens to the body when it occurs, and if and how it needs to be treated" .
+
+skos:CQ040 a skos:Concept ;
+    skos:altLabel "coronavirus mutations" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ040" ;
+    skos:prefLabel "how often are new versions of coronavirus emerging and if they cause more COVID-19 infections or make people sicker?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on new mutations of the virus that are more likely to infect people or make them sicker" .
+
+skos:CQ041 a skos:Concept ;
+    skos:altLabel "COVID-19 in African-Americans" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ041" ;
+    skos:prefLabel "what are the impacts of COVID-19 among African-Americans that differ from the rest of the U.S. population?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on and reasons for differences in spread and severity of COVID-19 among African Americans" .
+
+skos:CQ042 a skos:Concept ;
+    skos:altLabel "Vitamin D and COVID-19" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ042" ;
+    skos:prefLabel "does Vitamin D impact COVID-19 prevention and treatment?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for any benefits of taking Vitamin D to avoid or treat COVID-19" .
+
+skos:CQ043 a skos:Concept ;
+    skos:altLabel "violence during pandemic" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ043" ;
+    skos:prefLabel "how has the COVID-19 pandemic impacted violence in society, including violent crimes?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for analyses and data on how the pandemic is impacting rates of violence, including domestic/family violence related to quarantine" .
+
+skos:CQ044 a skos:Concept ;
+    skos:altLabel "impact of masks on coronavirus transmission" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ044" ;
+    skos:prefLabel "how much impact do masks have on preventing the spread of the COVID-19?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information confirming that wearing masks affects the spead of SARS-CoV-2 virus" .
+
+skos:CQ045 a skos:Concept ;
+    skos:altLabel "coronavirus mental health impact" ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ045" ;
+    skos:prefLabel "how has the COVID-19 pandemic impacted mental health?" ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information about psychological effects of COVID-19 and COVID-19 effect on mental health and pre-existing conditions" .
+
+
+<https://skosmos.coronawhy.org/COVID19#CQ001> a skos:Concept ;
+    skos:altLabel "coronavirus origin"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ001" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what is the origin of COVID-19"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information about whether the virus was designed in a lab or occured naturally in animals and how it got to humans"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ002> a skos:Concept ;
+    skos:altLabel "coronavirus response to weather changes"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ002" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how does the coronavirus respond to changes in the weather"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information about whether the COVID-19 pandemic will be impacted by the seasons and hot or cold temperatures"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ003> a skos:Concept ;
+    skos:altLabel "coronavirus immunity"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ003" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "will SARS-CoV2 infected people develop immunity?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether people who have recovered from COVID-19 can have it again, and whether having SARS, or other diseases caused by coronavirus, will improve chances to fight COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ004> a skos:Concept ;
+    skos:altLabel "how do people die from the coronavirus"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ004" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how do people die from the coronavirus?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the known causes of death in people who have COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ005> a skos:Concept ;
+    skos:altLabel "animal models of COVID-19"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ005" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "are there any drugs that work for SARS-CoV or SARS-CoV-2 in animals?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what we can learn about the impact of drugs on covid-19 from animal studies and what drugs can treat COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ006> a skos:Concept ;
+    skos:altLabel "coronavirus test rapid testing"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ006" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what types of rapid testing for COVID-19 have been developed?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what tests are used to diagnose COVID-19, how reliable are these tests, Who should be tested and when"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ007> a skos:Concept ;
+    skos:altLabel "blood tests for coronavirus"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ007" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "are there blood tests that detect antibodies to coronavirus?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information to determine if and what kinds of blood tests will show if a person had COVID, and if the blood tests show if a person is protected from COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ008> a skos:Concept ;
+    skos:altLabel "coronavirus under reporting"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ008" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "has testing availability lead to underreporting of COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the dangers of underreporting SARS-CoV-2 exposure and whether information about COVID-19 and its impact is skewed because of inadequate testing capacity or underreporting"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ009> a skos:Concept ;
+    skos:altLabel "coronavirus in Canada"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ009" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how has COVID-19 affected Canada"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether COVID-19 has affected Canada and, if so, to what extent"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ010> a skos:Concept ;
+    skos:altLabel "coronavirus social distancing impact"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ010" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "has social distancing had an impact on slowing the spread of COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on social distancing, and whether it slows down the pandemic"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ011> a skos:Concept ;
+    skos:altLabel "coronavirus hospital rationing"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ011" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are the guidelines for triaging patients infected with coronavirus?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how health personnel decide which COVID-19 patients are prioritized for treatment"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ012> a skos:Concept ;
+    skos:altLabel "coronavirus quarantine"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ012" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are best practices in hospitals and at home in maintaining quarantine?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how people who are infected or who were in physical contact with COVID-infected people can protect family members and other people beyond social distancing"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ013> a skos:Concept ;
+    skos:altLabel "how does coronavirus spread"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ013" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how does coronavirus spread?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on all possible ways to contract COVID-19 from people, animals and objects"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ014> a skos:Concept ;
+    skos:altLabel "coronavirus super spreaders"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ014" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what evidence is there related to COVID-19 super spreaders"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what it means to be a super spreader, why or how people become super spreaders, how common they are, and if there any special precautions against them"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ015> a skos:Concept ;
+    skos:altLabel "coronavirus outside body"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ015" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how long can the coronavirus live outside the body"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how long the coronavirus can stay active on solid and liquid food, water, air, food containers and common use surfaces"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ016> a skos:Concept ;
+    skos:altLabel "how long does coronavirus survive on surfaces"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ016" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how long does coronavirus survive on surfaces?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how long can coronavirus stay active on common use surfaces"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ017> a skos:Concept ;
+    skos:altLabel "coronavirus clinical trials"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ017" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "are there any clinical trials available for the coronavirus"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what COVID-19 clinicial trials are available and who can enroll"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ018> a skos:Concept ;
+    skos:altLabel "masks prevent coronavirus"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ018" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are the best masks for preventing infection by COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what types of masks should or should not be used to prevent infection by Covid-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ019> a skos:Concept ;
+    skos:altLabel "what alcohol sanitizer kills coronavirus"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ019" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what hand sanitizers kill COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on which hand sanitizers and household cleaning items kill SARS-CoV-2 virus"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ020> a skos:Concept ;
+    skos:altLabel "coronavirus and ACE inhibitors"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ020" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "are patients taking Angiotensin-converting enzyme inhibitors (ACE) inhibitors at increased risk for COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how COVID affects people taking Angiotensin-converting enzyme (ACE) inhibitors, and what people need to know if they are taking ACE inhibitors"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ021> a skos:Concept ;
+    skos:altLabel "coronavirus mortality"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ021" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are the mortality rates overall and in specific populations"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking  information on COVID-19 fatality rates in different countries and in different population groups based on gender, blood types, or other factors"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ022> a skos:Concept ;
+    skos:altLabel "coronavirus heart impacts"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ022" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "are heart complications likely in patients with COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on whether COVID-19 can cause heart complications, or if the condition will worsen in people who already have heart disease"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ023> a skos:Concept ;
+    skos:altLabel "coronavirus hypertension"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ023" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what kinds of complications related to COVID-19 are associated with hypertension?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what people with high blood pressure need to know about COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ024> a skos:Concept ;
+    skos:altLabel "coronavirus diabetes"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ024" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what kinds of complications related to COVID-19 are associated with diabetes"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on what people with diabetes need to know about COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ025> a skos:Concept ;
+    skos:altLabel "coronavirus biomarkers"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ025" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "which tests indicate severe covid infection?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on tests that predict which patients will develop severe COVID-19 symptoms and complications"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ026> a skos:Concept ;
+    skos:altLabel "coronavirus early symptoms"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ026" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are the early symptoms of COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on symptoms that show a patient is developing COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ027> a skos:Concept ;
+    skos:altLabel "coronavirus asymptomatic"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ027" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what is known about people that have COVID-19 without any symptoms?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on people that have COVID-19 without any symptoms"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ028> a skos:Concept ;
+    skos:altLabel "coronavirus hydroxychloroquine"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ028" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "does hydroxychloroquine treat COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on evidence that hydroxychloroquine treats COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ029> a skos:Concept ;
+    skos:altLabel "coronavirus drug repurposing"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ029" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "are there any existing drugs that could repurposed to treat COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on which SARS-CoV-2 protein-protein interactions indicate potential for drug targets, whether there are approved drugs that can be repurposed based on this information, and if there any known drugs that could be used to treat COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ030> a skos:Concept ;
+    skos:altLabel "coronavirus remdesivir"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ030" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "is remdesivir an effective treatment for COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on remdesivir treatments for COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ031> a skos:Concept ;
+    skos:altLabel "difference between coronavirus and flu"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ031" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how does the coronavirus differ from seasonal flu?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "Seeking information on the differences in symptoms between COVID-19 and flu, what tests will distinguish between coronavirus and the flu, and the differences in outcomes and complications"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ032> a skos:Concept ;
+    skos:altLabel "coronavirus subtypes"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ032" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "does SARS-CoV-2 have multiple strains, and if so what are they and how are they different?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on the different strains of SARS-Cov-2 and if different strains cause different symptoms"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ033> a skos:Concept ;
+    skos:altLabel "coronavirus vaccine candidates"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ033" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what vaccine candidates are being tested for COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on how far we are from getting a vaccine, which if any countries have vaccines, and if these vaccines be effective against all types of SARS-CoV-2"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ034> a skos:Concept ;
+    skos:altLabel "coronavirus recovery"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ034" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are the long-term complications for people who recover from COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information on any long-lasting complications of COVID-19, whether people can develop chronic lung disease and if there is any permanent organ damage"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ038> a skos:Concept ;
+    skos:altLabel "COVID inflammatory response"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ038" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how does COVID-19 cause or contribute to inflammation?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on how coronavirus causes damage to our body, how the body fights the disease and how the drugs help the body fighting COVID"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ039> a skos:Concept ;
+    skos:altLabel "COVID-19 cytokine storm"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ039" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what is a cytokine storm and how is it related to COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for definitions of cytokine storm, the role of COVID-19 in cytokine storms, what causes it, what happens to the body when it occurs, and if and how it needs to be treated"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ040> a skos:Concept ;
+    skos:altLabel "coronavirus mutations"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ040" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how often are new versions of coronavirus emerging and if they cause more COVID-19 infections or make people sicker?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on new mutations of the virus that are more likely to infect people or make them sicker"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ041> a skos:Concept ;
+    skos:altLabel "COVID-19 in African-Americans"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ041" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "what are the impacts of COVID-19 among African-Americans that differ from the rest of the U.S. population?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information on and reasons for differences in spread and severity of COVID-19 among African Americans"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ042> a skos:Concept ;
+    skos:altLabel "Vitamin D and COVID-19"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ042" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "does Vitamin D impact COVID-19 prevention and treatment?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for any benefits of taking Vitamin D to avoid or treat COVID-19"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ043> a skos:Concept ;
+    skos:altLabel "violence during pandemic"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ043" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how has the COVID-19 pandemic impacted violence in society, including violent crimes?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for analyses and data on how the pandemic is impacting rates of violence, including domestic/family violence related to quarantine"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ044> a skos:Concept ;
+    skos:altLabel "impact of masks on coronavirus transmission"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ044" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how much impact do masks have on preventing the spread of the COVID-19?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "looking for information confirming that wearing masks affects the spead of SARS-CoV-2 virus"@en .
+
+<https://skosmos.coronawhy.org/COVID19#CQ045> a skos:Concept ;
+    skos:altLabel "coronavirus mental health impact"@en ;
+    skos:broader <https://www.wikidata.org/wiki/Q2252352> ;
+    skos:code "CQ045" ;
+    skos:memberOf <https://skosmos.coronawhy.org/COVID19#CO007> ;
+    skos:prefLabel "how has the COVID-19 pandemic impacted mental health?"@en ;
+    skos:related <https://www.wikidata.org/wiki/Q84263196> ;
+    skos:scopeNote "seeking information about psychological effects of COVID-19 and COVID-19 effect on mental health and pre-existing conditions"@en .
+

@@ -1,4 +1,4 @@
-from stain/jena-fuseki 
+from stain/jena-fuseki:4.0.0 
 RUN apt-get update && \
 apt-get install -y curl procps vim git ruby
 RUN PATH=$PATH:/jena-fuseki/bin;export PATH

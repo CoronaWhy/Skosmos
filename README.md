@@ -36,6 +36,25 @@ wiki for details on obtaining the source and running your own instance of Skosmo
 For information about released versions, see 
 [Release Notes](https://github.com/NatLibFi/Skosmos/releases).
 
+# Docker support
+
+Skosmos Docker Compose uses Træfik, a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Træfik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically.
+
+You need to specify the value of "traefikhost" and pub your domain name there (for example, sshopencloud.eu or just localhost) before you'll deploy Skosmos:
+
+```export traefikhost=localhost``` OR ```export traefikhost=sshopencloud.eu```
+
+and create docker network for all the containers you would expose on the web.
+
+```docker network create traefik```
+
+By default you'll get SSL certificate provided by letsencrypt, please specify your email address if you need https support, for example:
+
+```export useremail=team@myskosmos.org```
+
+* Make sure you have docker and docker-compose installed
+* Run `docker-compose up` to start Skosmos as a service on your domain name with SSL support
+
 
 ## Reporting issues
 
